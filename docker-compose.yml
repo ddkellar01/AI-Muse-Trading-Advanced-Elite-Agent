@@ -2,7 +2,10 @@ version: '3.8'
 
 services:
   trading-agent-api:
-    build: .
+    image: 4 credkellar/ai-muse-trading-agent:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: ai_muse_trading_api
     restart: always
     ports:
@@ -10,21 +13,24 @@ services:
     environment:
       - COINBASE_API_KEY=${COINBASE_API_KEY}
       - COINBASE_API_SECRET=${COINBASE_API_SECRET}
-      - DATABASE_URL=sqlite:///./data/trading_agent.db
+      - DATABASE_URL=sqlite:////data/trading_agent.db
     volumes:
       - ./data:/app/data
     networks:
       - agent-net
 
   trading-agent-cron:
-    build: .
+    image: 4 credkellar/ai-muse-trading-agent:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: ai_muse_trading_cron
     restart: always
     command: python scripts/cron_scheduler.py
     environment:
       - COINBASE_API_KEY=${COINBASE_API_KEY}
       - COINBASE_API_SECRET=${COINBASE_API_SECRET}
-      - DATABASE_URL=sqlite:///./data/trading_agent.db
+      - DATABASE_URL=sqlite:////data/trading_agent.db
     volumes:
       - ./data:/app/data
     networks:

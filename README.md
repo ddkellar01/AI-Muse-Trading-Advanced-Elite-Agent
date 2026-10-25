@@ -1,3 +1,5 @@
+(https://raw.githubusercontent.com/ddkellar01/AI-Muse-Trading-Advanced-Elite-Agent/main/IMG_5190.jpeg)
+
 # 🤖 AI-Muse-Trading-Advanced-Elite-Agent
 
 ![CI/CD Pipeline](https://img.shields.io/github/actions/workflow/status/ddkellar01/AI-Muse-Trading-Advanced-Elite-Agent/deploy.yml?branch=main&style=for-the-badge&logo=github&label=Build%20%26%20Test)

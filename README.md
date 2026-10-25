@@ -98,6 +98,20 @@ You don't have to stare at confusing money charts all day! You can just tell you
 3. ⚡ **The Worker (`agents/executor.py`):** Talks directly to Coinbase to buy or sell your coins safely.
 4. ⏰ **The Clock (`scripts/cron_scheduler.py`):** Wakes up every hour to check on your portfolio automatically.
 
+## 🛠️ Requirements & Installation
+
+### 📋 Requirements
+* 🐍 Python 3.11 or higher
+* 🐳 Docker & Docker Compose
+* 🔐 Coinbase Advanced API Key & API Secret
+* 🌐 Internet connection
+
+### 📦 Step-By-Step Installation
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/ddkellar01/AI-Muse-Trading-Advanced-Elite-Agent.git](https://github.com/ddkellar01/AI-Muse-Trading-Advanced-Elite-Agent.git)
+   cd AI-Muse-Trading-Advanced-Elite-Agent
+
 ---
 
 ## 📂 Project Directory Layout

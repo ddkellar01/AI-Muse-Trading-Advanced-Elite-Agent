@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  trading-agent-api:
+    build: .
+    container_name: ai_muse_trading_api
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - COINBASE_API_KEY=${COINBASE_API_KEY}
+      - COINBASE_API_SECRET=${COINBASE_API_SECRET}
+      - DATABASE_URL=sqlite:///./data/trading_agent.db
+    volumes:
+      - ./data:/app/data
+    networks:
+      - agent-net
+
+  trading-agent-cron:
+    build: .
+    container_name: ai_muse_trading_cron
+    restart: always
+    command: python scripts/cron_scheduler.py
+    environment:
+      - COINBASE_API_KEY=${COINBASE_API_KEY}
+      - COINBASE_API_SECRET=${COINBASE_API_SECRET}
+      - DATABASE_URL=sqlite:///./data/trading_agent.db
+    volumes:
+      - ./data:/app/data
+    networks:
+      - agent-net
+
+networks:
+  agent-net:
+    driver: bridge

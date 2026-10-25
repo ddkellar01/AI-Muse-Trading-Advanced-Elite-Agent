@@ -1,4 +1,4 @@
-(https://raw.githubusercontent.com/ddkellar01/AI-Muse-Trading-Advanced-Elite-Agent/main/IMG_5190.jpeg)
+![AI-Muse-Trading-Advanced-Elite-Agent](https://raw.githubusercontent.com/ddkellar01/AI-Muse-Trading-Advanced-Elite-Agent/main/IMG_5190.jpeg)
 
 # 🤖 AI-Muse-Trading-Advanced-Elite-Agent
 
